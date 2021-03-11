@@ -1,0 +1,52 @@
+@import '../../scss/variables.scss';
+
+.NavBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: -$m-pad;
+}
+
+.MenuBtn {
+    position: absolute;
+    right: 0;
+    background-color: $secondaryColor;
+    border: 2px solid $primaryColor;
+    border-right: none;
+    border-radius: 12.5px 0 0 12.5px;
+    width: 4.6875em;
+    height: 3.125em;
+}
+
+.MenuBtn button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    
+
+    span {
+        display: block;
+        width: 50%;
+        height: 5px;
+        margin-left: 25%;
+        background-color: $primaryColor;
+        border: 1px solid $secondaryColor;
+        border-radius: 0 100px 0 100px ;
+    }
+
+    span:nth-child(2) {
+        margin: .2em 25%;
+        width: 40%;
+    }
+
+    span:nth-child(3) {
+        width: 30%;
+    }
+
+}

@@ -1,0 +1,38 @@
+@import './scss/variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primaryFont;
+    color: $primaryColor;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+body, html, .App {
+    background-image: linear-gradient(to bottom right, $secondaryColor, #171007);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.App {
+    padding: $m-pad;
+}

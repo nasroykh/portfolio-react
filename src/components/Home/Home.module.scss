@@ -1,0 +1,70 @@
+@import '../../scss/variables.scss';
+
+.Home {
+    height: 100vh;
+    padding-top: 150px;
+}
+
+.HeroSection {
+    margin: 2em 0;
+    & > h1 {
+        font-weight: 400;
+        font-size: $heroFontSize;
+        text-align: center;
+        line-height: 2.5;
+        b {
+            font-weight: 600;
+        }
+    }
+
+    .HeroButtons {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 5em;
+
+        & > div:last-child {
+            margin: 1.25em .5em 0;
+        }
+    }
+}
+
+.Aside {
+    background-color: $secondaryColor;
+    border-top: 2px solid $primaryColor;
+    border-bottom: 2px solid $primaryColor;
+    
+    margin-left: -$m-pad;
+    margin-right: -$m-pad;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 $m-pad;
+    }
+
+    a {
+        display: block;
+        width: 60%;
+        margin: auto;
+    }
+}
+
+// .ScrollDown {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     position: fixed;
+//     bottom: 0;
+//     left: 25%;
+//     right: 25%;
+//     span {
+//         font-size: $buttonFontSize;
+//         font-weight: 700;
+//         font-family: $secondaryFont;
+//     }
+
+//     svg {
+//         padding: .75em;
+//     }
+// }
