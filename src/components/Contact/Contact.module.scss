@@ -1,0 +1,85 @@
+@import '../../scss/variables.scss';
+
+.Contact {
+    padding-bottom: 5em;
+
+    & > span {
+        display: block;
+        text-align: center;
+        font-weight: 500;
+        font-size: $buttonFontSize;
+    }
+
+    & > button {
+        margin: 2em auto 0;
+        width: 75%;
+    }
+}
+
+.SeparatorLine {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.4;
+    margin: 3em 0 2em;
+
+    & > span:first-of-type,
+    & > span:last-of-type {
+        height: 3px;
+        width: 45%;
+        background-color: $primaryColor;
+    }
+
+    & > span {
+        font-weight: 700;
+    }
+}
+
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+
+    & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 1em;
+        border-bottom: 2px solid rgba($primaryColor, 0.6);
+        border-top: 2px solid rgba($primaryColor, 0.6);
+        border-radius: 12.5px;
+        overflow: hidden;
+    }
+    
+    input, textarea {
+        display: block;
+        background: none;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        padding: 1.25em 0 1.25em 5%;
+
+        &:focus {
+            background-color: $secondaryColor;
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 5%;
+        font-weight: 500;
+        opacity: 0.5;
+    }
+
+    textarea ~ label {
+        top: 10%;
+    }
+
+    & > button:last-child {
+        width: 75%;
+        margin: 2em auto 0;
+    }
+}

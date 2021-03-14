@@ -1,5 +1,7 @@
 import React from 'react';
 import classes from './AboutMe.module.scss';
+import PageTitle from '../../elements/PageTitle/PageTitle';
+import SkillIcon from '../../elements/SkillIcon/SkillIcon';
 import picture from '../../assets/aboutme-pic.png';
 import {ReactComponent as ShopifyAmLogo} from '../../assets/aboutme-shopify.svg';
 import {ReactComponent as ReactAmLogo} from '../../assets/aboutme-react.svg';
@@ -9,38 +11,38 @@ import {ReactComponent as FinLogo} from '../../assets/finance.svg';
 
 const AboutMe = () => {
     return (
-        <section className={classes.AboutMe}>
-            <h1>ABOUT ME</h1>
-            <div>
+        <section className={classes.AboutMeContainer} id="about-me">
+            <PageTitle>ABOUT ME</PageTitle>
+            <div className={classes.AboutMe}>
                 <h2>Nasreddine Yakhou</h2>
                 <img src={picture} alt=""/>
-                <p>I’m an eCommerce developer, with 2 years of web development experience.<br/>
+                <p>I’m an eCommerce developer, with 2 years of web development experience.<br/><br/>
                     I honestly love programming and solving problems and on top of that I take great pleasure in learning, 
-                    I can’t support staying more than a day without acquiring a knowledge of something!<br/>
+                    I can’t support staying more than a day without acquiring a knowledge of something!<br/><br/>
                     I also have intermediate skills in UI/UX design.</p>
-                <ul>
+                <ul className={classes.SkillSet}>
                     <li>
-                        <span><ShopifyAmLogo/></span>
+                        <SkillIcon><ShopifyAmLogo/></SkillIcon>
                         <span>Skilled Shopify Theme Developer</span>
                     </li>
 
                     <li>
-                        <span><ReactAmLogo/></span>
+                        <SkillIcon><ReactAmLogo/></SkillIcon>
                         <span>Mastered React.js</span>
                     </li>
 
                     <li>
-                        <span><DbLogo/></span>
+                        <SkillIcon><DbLogo/></SkillIcon>
                         <span>Mastered Databases</span>
                     </li>
 
                     <li>
-                        <span><CompLogo/></span>
+                        <SkillIcon><CompLogo/></SkillIcon>
                         <span>Computer Science graduate</span>
                     </li>
 
                     <li>
-                        <span><FinLogo/></span>
+                        <SkillIcon><FinLogo/></SkillIcon>
                         <span>Finance and accounting graduate</span>
                     </li>
                 </ul>

@@ -1,0 +1,17 @@
+@import '../../scss/variables.scss';
+
+.PageTitle {
+    font-family: $secondaryFont;
+    font-size: $pageTitleFontSize;
+    display: inline-block;
+    margin-bottom: 1.5em;
+
+    &::after {
+        content: '';
+        width: 50%;
+        height: .125em;
+        margin-top: .25em;
+        background-color: $primaryColor;
+        display: block;
+    }
+}

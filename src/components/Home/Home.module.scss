@@ -1,8 +1,7 @@
 @import '../../scss/variables.scss';
 
 .Home {
-    height: 100vh;
-    padding-top: 150px;
+    padding: 150px 0 5em;
 }
 
 .HeroSection {
@@ -17,14 +16,15 @@
         }
     }
 
-    .HeroButtons {
-        display: flex;
-        flex-direction: column;
-        margin: 2em 5em;
+}
 
-        & > div:last-child {
-            margin: 1.25em .5em 0;
-        }
+.HeroButtons {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 5em;
+
+    & > button:last-child {
+        margin: 1.25em .5em 0;
     }
 }
 
@@ -68,3 +68,52 @@
 //         padding: .75em;
 //     }
 // }
+
+@media (min-width: 992px) {
+    .HeroSection {
+        & > h1 {
+            font-size: $heroFontSize*1.75;
+            text-align: left;
+        }
+    }
+
+    .HeroButtons {
+        flex-direction: row;
+        margin: 2em 0;
+    
+        & > button {
+            width: 40%;
+            padding: 1.5em 0;
+        }
+
+        & > button:last-child {
+            margin: 0 1em;
+            width: 35%;
+        }
+    }
+
+    .Home {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Aside {
+        border: 2px solid $primaryColor;
+        border-right: none;
+        margin-right: -$d-pad;    
+        border-radius: 25px 0 0 25px;
+
+        ul {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 $m-pad;
+            height: 100%;
+        }
+    
+        a {
+            display: block;
+            width: 75%;
+            margin: auto;
+        }
+    }
+}

@@ -18,6 +18,7 @@ body, html, .App {
     background-image: linear-gradient(to bottom right, $secondaryColor, #171007);
     background-attachment: fixed;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 img, svg {
@@ -29,10 +30,24 @@ a {
     text-decoration: none;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
 }
 
+h1,h2,h3,p,a,span,button,label {
+    letter-spacing: 0.03rem;
+}
+
 .App {
     padding: $m-pad;
+}
+
+@media (min-width: 992px) {
+    .App {
+        padding: $d-pad;
+    }
 }

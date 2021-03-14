@@ -9,8 +9,6 @@ import {ReactComponent as ScrollLogo} from '../../assets/scroll.svg';
 
 const Home = () => {
 
-    
-
     return (
         <section className={classes.Home} id="home">
             <div className={classes.HeroSection}>

@@ -1,0 +1,12 @@
+@import '../../scss/variables.scss';
+
+.SkillIcon {
+    display: block;
+    background-color: $primaryColor;
+    height: 3.125em;
+    width: 3.125em;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
