@@ -11,3 +11,9 @@
     font-weight: 700;
     font-family: $secondaryFont;
 }
+
+@media (min-width:992px) {
+    .Button {
+        font-size: $buttonFontSize*1.25;
+    };
+}

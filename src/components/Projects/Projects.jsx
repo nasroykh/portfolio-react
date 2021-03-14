@@ -22,17 +22,22 @@ import {ReactComponent as ShopifyLogo} from '../../assets/shopify.svg';
 import {ReactComponent as TsLogo} from '../../assets/ts.svg';
 import {ReactComponent as XdLogo} from '../../assets/xd.svg';
 
-const Projects = () => {
+
+const Projects = (props) => {
+    let slideStyle = {
+        transform: `translate(-${props.slidePosition}00%)`
+    }
+    
     return (
         <section className={classes.Projects} id="projects">
             <PageTitle>PROJECTS</PageTitle>
             <div className={classes.ProjectsGrid}>
                 <div className={classes.SlideControls}>
-                        <button><SlideIcon/></button>
-                        <button><SlideIcon/></button>
+                        <button id="prev" onClick={props.slideHandler}><SlideIcon/></button>
+                        <button id="next" onClick={props.slideHandler}><SlideIcon/></button>
                 </div>
-                <div className={classes.Project}>
-                        <h2>Project 1 title</h2>
+                <div className={classes.Project} style={slideStyle}>
+                    <h2>Project 1 title</h2>
                     <div className={classes.ProjectView}>
                         <img src={pic} alt=""/>
                         <div className={classes.ProjectDetails}>
@@ -79,7 +84,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-                <div className={classes.Project}>
+                <div className={classes.Project} style={slideStyle}>
                         <h2>Project 2 title</h2>
                     <div className={classes.ProjectView}>
                         <img src={pic} alt=""/>
@@ -127,8 +132,56 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-                <div className={classes.Project}>
+                <div className={classes.Project} style={slideStyle}>
                         <h2>Project 3 title</h2>
+                    <div className={classes.ProjectView}>
+                        <img src={pic} alt=""/>
+                        <div className={classes.ProjectDetails}>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <div className={classes.ProjectLinks}>
+                                <a href="#">
+                                    <span>View code</span>
+                                    <CodeIcon color="#101820"/>
+                                </a>
+                                <a href="#">
+                                    <ViewIcon color="#101820"/>
+                                    <span>Visit</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={classes.BuiltUsing}>
+                        <span>Built using :</span>
+                        <div className={classes.TechLogos}>
+                            <div>
+                                <SkillIcon>
+                                    <JsLogo/>
+                                </SkillIcon>
+                                <span>JavaScript</span>
+                            </div>
+                            <div>
+                                <SkillIcon>
+                                    <HtmlLogo/>
+                                </SkillIcon>
+                                <span>HTML 5</span>
+                            </div>
+                            <div>
+                                <SkillIcon>
+                                    <CssLogo/>
+                                </SkillIcon>
+                                <span>CSS 3</span>
+                            </div>
+                            <div>
+                                <SkillIcon>
+                                    <SassLogo/>
+                                </SkillIcon>
+                                <span>SASS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={classes.Project}>
+                        <h2>Project 4 title</h2>
                     <div className={classes.ProjectView}>
                         <img src={pic} alt=""/>
                         <div className={classes.ProjectDetails}>

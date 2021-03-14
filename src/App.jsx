@@ -7,12 +7,47 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
 
 class App extends Component {
+
+	state = {
+		showSd: false,
+		slidePosition: 0
+	}
+
+	showSdHandler = () => {
+		console.log('hey');
+		this.setState((prevState) => (
+			{
+				...this.state,
+				showSd: !prevState.showSd
+			}
+		))
+	}
+
+	slideHandler = (e) => {
+		if (e.currentTarget.id === 'next' && this.state.slidePosition<2) {
+			this.setState((prevState) => (
+				{
+					...this.state,
+					slidePosition: prevState.slidePosition+1
+				}
+			))
+		}
+		else if (e.currentTarget.id === 'prev' && this.state.slidePosition>0){
+			this.setState((prevState) => (
+				{
+					...this.state,
+					slidePosition: prevState.slidePosition-1
+				}
+			))
+		}
+	}
+
 	render() {
 		return (
 			<div className={classes.App}>
-				<NavBar/>
+				<NavBar showSdHandler={this.showSdHandler} showSd={this.state.showSd}/>
 				<Home/>
-				<Projects/>
+				<Projects slideHandler={this.slideHandler} slidePosition={this.state.slidePosition}/>
 				<AboutMe/>
 				<Contact/>
 			</div>

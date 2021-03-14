@@ -1,7 +1,7 @@
 @import '../../scss/variables.scss';
 
 .Home {
-    padding: 150px 0 5em;
+    padding: 150px 0 10em;
 }
 
 .HeroSection {
@@ -71,8 +71,9 @@
 
 @media (min-width: 992px) {
     .HeroSection {
+        margin: 3em 0;
         & > h1 {
-            font-size: $heroFontSize*1.75;
+            font-size: $heroFontSize*1.5;
             text-align: left;
         }
     }
@@ -82,13 +83,13 @@
         margin: 2em 0;
     
         & > button {
-            width: 40%;
-            padding: 1.5em 0;
+            width: 50%;
+            padding: 1.25em 0;
         }
 
         & > button:last-child {
             margin: 0 1em;
-            width: 35%;
+            width: 40%;
         }
     }
 

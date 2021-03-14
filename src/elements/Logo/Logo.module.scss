@@ -7,3 +7,9 @@
     width: 65%;
     margin: auto;
 }
+
+@media (min-width: 992px) {
+    .Logo a {
+        width: 80%;
+    }
+}

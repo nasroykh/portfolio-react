@@ -1,0 +1,52 @@
+@import '../../scss/variables.scss';
+
+.SideDrawer {
+    background-color: $secondaryColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    padding: 2em 0 5em;
+    border-right: 2px solid $primaryColor;
+    border-bottom: 2px solid $primaryColor;
+    border-bottom-right-radius: 12.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 500ms ease-in-out;
+    opacity: 0.3;
+    transition-property: transform, opacity;
+    transform: translateX(-100%);
+    z-index: 1001;
+    
+    & > li {
+        margin: .75em 0;
+        font-weight: 400;
+        &:first-child a {
+            width: 50%;
+        }
+    }
+
+    a {
+        font-size: 1.25rem;
+    }
+
+}
+
+.ShowSd {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.Active {
+    font-weight: 600;
+    &::after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 3px;
+        border-radius: 0 12.5px 0 12.5px;
+        background-color: $primaryColor;
+        margin: auto;
+    }
+}

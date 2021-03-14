@@ -1,0 +1,20 @@
+@import '../../scss/variables.scss';
+
+.BackDrop {
+    background-color: $secondaryColor;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 500ms ease-in-out;
+    z-index: -1;
+}
+
+.ShowBd {
+    z-index: 1000;
+    opacity: 0.8;
+}

@@ -21,6 +21,7 @@
     border-radius: 12.5px 0 0 12.5px;
     width: 4.6875em;
     height: 3.125em;
+    z-index: 1002;
 }
 
 .MenuBtn button {
@@ -40,15 +41,33 @@
         background-color: $primaryColor;
         border: 1px solid $secondaryColor;
         border-radius: 0 100px 0 100px ;
+        transition: all 500ms ease-in-out;
     }
 
     span:nth-child(2) {
         margin: .2em 25%;
         width: 40%;
     }
-
+    
     span:nth-child(3) {
         width: 30%;
+    }
+
+}
+
+.CloseBtn button {
+
+    & > span:nth-child(1) {
+        transform: rotate(-45deg) translate(-30%);
+    }
+
+    & > span:nth-child(2) {
+        transform: scale(0);
+    }
+
+    & > span:nth-child(3) {
+        width: 50%;
+        transform: rotate(45deg) translate(-30%);
     }
 
 }
@@ -57,5 +76,18 @@
     .NavBar {
         margin-left: -$d-pad;
         margin-right: -$d-pad;
+    }
+
+    .MenuBtn {
+        width: 4.6875em*1.5;
+        height: 3.125em*1.5;
+    }
+
+    .MenuBtn button {
+        span {
+            height: 8px;
+            background-color: $primaryColor;
+            border: 2px solid $secondaryColor;
+        }
     }
 }

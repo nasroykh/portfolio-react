@@ -46,7 +46,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        margin-bottom: 1em;
+        margin-bottom: 1.75em;
         border-bottom: 2px solid rgba($primaryColor, 0.6);
         border-top: 2px solid rgba($primaryColor, 0.6);
         border-radius: 12.5px;
@@ -61,6 +61,7 @@
         width: 100%;
         height: 100%;
         padding: 1.25em 0 1.25em 5%;
+        background-color: rgba($secondaryColor, 0.25);
 
         &:focus {
             background-color: $secondaryColor;
@@ -81,5 +82,26 @@
     & > button:last-child {
         width: 75%;
         margin: 2em auto 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .Contact {
+        & > span {
+            font-size: $buttonFontSize*1.25;
+        }
+
+        & > button {
+            width: 30%;
+        }
+    }
+
+    .SeparatorLine > span {
+        font-size: 1.25rem;
+    }
+
+    .ContactForm {
+        width: 50%;
+        margin: 2.5em auto;
     }
 }
