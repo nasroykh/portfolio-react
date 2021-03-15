@@ -88,7 +88,7 @@
     position: absolute;
     z-index: 10;
     width: 100vw;
-    top: 25%;
+    top: 35%;
     bottom: 25%;
     display: flex;
     justify-content: space-between;
@@ -150,10 +150,12 @@
 
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
     .ProjectsGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0 2em;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+        margin-left: -$m-pad;
+        margin-right: -$m-pad;
     }
 
     .Project {
@@ -163,15 +165,17 @@
         grid-template-rows: 5% 95%;
         column-gap: 1em;
         padding: 0;
-        
+
         & > h2 {
             grid-column: 2/-1;
+            padding-bottom: 1em;
         }
 
     }
     
     .ProjectView {
         grid-column: 2/-1;
+        margin: auto;
     }
 
     
@@ -199,9 +203,40 @@
 
     .TechLogos {
         width: 100%;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .SlideControls {
         display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .TechLogos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ProjectLinks {
+        a {
+            padding: .75em 0;
+        }
+        span {
+            font-size: 1rem;
+        }
+        svg {
+            padding: .05em;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .ProjectsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: -$d-pad;
+        margin-right: -$d-pad;
+    }
+
+    .TechLogos {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

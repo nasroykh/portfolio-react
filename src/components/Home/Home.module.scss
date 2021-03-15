@@ -1,7 +1,7 @@
 @import '../../scss/variables.scss';
 
 .Home {
-    padding: 150px 0 10em;
+    padding: 7.5em 0;
 }
 
 .HeroSection {
@@ -21,10 +21,17 @@
 .HeroButtons {
     display: flex;
     flex-direction: column;
-    margin: 2em 5em;
+    align-items: center;
+    margin: 2em 0;
+
+    & > button {
+        width: 60%;
+        padding: auto 1em;
+    }
 
     & > button:last-child {
-        margin: 1.25em .5em 0;
+        margin: 1.25em 0;
+        width: 55%;
     }
 }
 
@@ -69,7 +76,25 @@
 //     }
 // }
 
+@media (min-width: 576px) {
+
+    .HeroButtons {
+        & > button {
+            width: 40%;
+            padding: auto 1em;
+        }
+    
+        & > button:last-child {
+            width: 35%;
+        }    }
+
+
+}
+
 @media (min-width: 992px) {
+    .Home {
+        padding: 12.5em 0 10em;
+    }
     .HeroSection {
         margin: 3em 0;
         & > h1 {
@@ -103,6 +128,7 @@
         border-right: none;
         margin-right: -$d-pad;    
         border-radius: 25px 0 0 25px;
+        width: 4.6875em*1.5;
 
         ul {
             flex-direction: column;

@@ -1,15 +1,35 @@
-.Logo {
-    
-}
-
 .Logo a {
     display: block;
     width: 65%;
     margin: auto;
+    transition: all 500ms ease-in-out;
+
+    svg {
+        height: 100%;
+    }
 }
+
+.SmallLogo a{
+    width: 35%;
+}
+
+@media (min-width: 576px) {
+    .Logo a {
+        width: 80%;
+    }
+
+    .SmallLogo a{
+        width: 45%;
+    }
+}
+
 
 @media (min-width: 992px) {
     .Logo a {
-        width: 80%;
+        width: 90%;
+    }
+
+    .SmallLogo a{
+        width: 55%;
     }
 }

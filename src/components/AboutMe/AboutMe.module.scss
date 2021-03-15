@@ -8,24 +8,32 @@
 .AboutMe {
 
     margin-right: -$m-pad;
+    display: grid;
+    grid-template-columns: 15% 85%;
 
     & > h2 {
         font-family: $tertiaryFont;
-        font-size: 3rem;
+        font-size: 15vw;
         font-weight: 500;
-        margin-bottom: .5em;
         width: 100%;
+        grid-column: 1/2;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        text-align: center;
+        padding-right: 1.5em;
     } 
 
     & > img {
+        grid-column: 2/-1;
         border: 2px solid $primaryColor;
         border-right: none;
         border-radius: 50px 0 0 50px;
         margin: 0 0 2em auto;
-        max-width: 60%;
+        max-width: 80%;
     }
 
     & > p {
+        grid-column: 1/-1;
         margin-right: $m-pad;
         line-height: 1.5;
         font-weight: 300;
@@ -34,6 +42,7 @@
 }
 
 .SkillSet {
+    grid-column: 1/-1;
     margin-right: $m-pad;
 
     & > li {
@@ -59,8 +68,13 @@
 
 @media (min-width: 576px) {
     .AboutMe {
+        grid-template-columns: 10% 90%;
+        & > h2 {
+            font-size: 12.5vw;
+        } 
+
         & > img {
-            max-width: 50%;
+            max-width: 65%;
         }
     }
 }
@@ -68,27 +82,36 @@
 @media (min-width: 992px) {
     .AboutMe {
         margin-right: -$d-pad;
-        display: grid;
         grid-template-columns: 40% 25% 35%;
-        grid-template-rows: 30% 70%; 
+        grid-template-rows: 25% 75%; 
 
         & > h2 {
             font-size: 3rem*2;
-            grid-column: 1/-1;
+            writing-mode: initial;
+            z-index: 10;
+            transform: rotate(0deg);
+            text-align: left;
+            padding: 0;
+            grid-column: 1/4;
             grid-row: 1/2;
+            margin: 0;
             &::after {
                 content: '';
                 display: block;
                 height: 3px;
                 width: 100%;
                 background-color: $primaryColor;
+                margin-bottom: 1em;
             }
         } 
 
         & > img {
-            max-width: 80%;
+            max-width: 85%;
             grid-column: 3/-1;
             grid-row: 1/-1;
+            margin: 0;
+            justify-self: flex-end;
+            z-index: 12;
         }
 
         & > p {
@@ -100,18 +123,15 @@
             margin-bottom: 0;
             font-size: 1rem*1.25;
         }
-
-        & > ul {
-            grid-row: 2/-1;
-            grid-column: 2/3;
-        }
     }
 
     .SkillSet {
         margin: 0;
+        grid-row: 2/-1;
+        grid-column: 2/3;
 
         & > li {
-            margin-bottom: 1.5em;
+            margin-bottom: 2em;
         }
 
         span:first-child {

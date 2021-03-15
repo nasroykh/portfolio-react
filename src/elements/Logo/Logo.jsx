@@ -1,9 +1,9 @@
 import classes from './Logo.module.scss';
 import React from 'react';
 
-const Logo = () => {
+const Logo = (props) => {
     return (
-        <div className={classes.Logo}>
+        <div className={`${classes.Logo} ${props.scrolling ? classes.SmallLogo : ''}`}>
             <a href="#">
                 <svg width="132" height="143" viewBox="0 0 132 143" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M25 41.7378H30.4994V65.8004C30.4994 68.8376 28.0372 71.2998 25 71.2998V41.7378Z" fill="#F2AA4C" stroke="#101820" stroke-width="2"/>

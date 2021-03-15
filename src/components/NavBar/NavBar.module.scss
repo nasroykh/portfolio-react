@@ -4,12 +4,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // position: fixed;
+    padding: 1.5em 0;
     position: absolute;
     top: 0;
     width: 100%;
     margin-left: -$m-pad;
     margin-right: -$m-pad;
+    transition: all 500ms ease-in-out;
+    z-index: 5000;
+}
+
+.FixedNav {
+    position: fixed;
+    background-color: rgba($secondaryColor, 0.9);
+    padding: .75em 0;
 }
 
 .MenuBtn {
@@ -21,14 +29,14 @@
     border-radius: 12.5px 0 0 12.5px;
     width: 4.6875em;
     height: 3.125em;
-    z-index: 1002;
+    z-index: 3060;
+    overflow: hidden;
 }
 
 .MenuBtn button {
     display: block;
     width: 100%;
     height: 100%;
-    background: none;
     border: none;
     outline: none;
     
@@ -89,5 +97,17 @@
             background-color: $primaryColor;
             border: 2px solid $secondaryColor;
         }
+    }
+
+    .CloseBtn button {
+
+        & > span:nth-child(1) {
+            transform: rotate(-45deg) translate(-25%);
+        }
+    
+        & > span:nth-child(3) {
+            transform: rotate(45deg) translate(-27.5%);
+        }
+    
     }
 }

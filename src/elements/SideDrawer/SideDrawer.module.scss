@@ -17,13 +17,14 @@
     opacity: 0.3;
     transition-property: transform, opacity;
     transform: translateX(-100%);
-    z-index: 1001;
+    z-index: 5025;
     
     & > li {
         margin: .75em 0;
         font-weight: 400;
         &:first-child a {
             width: 50%;
+            margin-bottom: 1em;
         }
     }
 
@@ -48,5 +49,31 @@
         border-radius: 0 12.5px 0 12.5px;
         background-color: $primaryColor;
         margin: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .SideDrawer {
+        display: grid;
+        grid-template-columns: 2fr repeat(4, 1fr);
+        padding: 1em 2em;
+        align-items: center;
+        justify-items: center;
+        width: auto;
+
+        & > li {
+            margin: 0 2em 0 0;
+        }
+
+        & > li:first-child {
+            justify-self: flex-start;
+            a {
+                width: 70%;
+            }
+        }
+
+        a {
+            font-size: 1.375rem;
+        }
     }
 }

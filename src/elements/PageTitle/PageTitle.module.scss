@@ -1,11 +1,12 @@
 @import '../../scss/variables.scss';
 
 .PageTitle {
+    position: relative;
     font-family: $secondaryFont;
     font-size: $pageTitleFontSize;
     display: inline-block;
     margin-bottom: 1.5em;
-
+    z-index: 5025;
     &::after {
         content: '';
         width: 50%;
@@ -16,8 +17,14 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
     .PageTitle {
         font-size: $pageTitleFontSize*1.25;
+    }
+}
+
+@media (min-width: 992px) {
+    .PageTitle {
+        font-size: $pageTitleFontSize*1.375;
     }
 }

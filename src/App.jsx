@@ -5,12 +5,32 @@ import Home from './components/Home/Home';
 import Projects from './components/Projects/Projects';
 import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
+import SideDrawer from './elements/SideDrawer/SideDrawer';
+import BackDrop from './elements/BackDrop/BackDrop';
 
 class App extends Component {
 
+	componentDidMount() {
+		window.addEventListener('scroll', this.scrollHandler);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.scrollHandler);
+	}
+
 	state = {
 		showSd: false,
-		slidePosition: 0
+		slidePosition: 0,
+		scrolling: false
+	}
+
+	scrollHandler = (e) => {
+		if (window.scrollY > 50) {
+			this.setState({...this.state, scrolling: true})
+		}
+		else {
+			this.setState({...this.state, scrolling: false})
+		}
 	}
 
 	showSdHandler = () => {
@@ -45,11 +65,13 @@ class App extends Component {
 	render() {
 		return (
 			<div className={classes.App}>
-				<NavBar showSdHandler={this.showSdHandler} showSd={this.state.showSd}/>
+				<NavBar showSdHandler={this.showSdHandler} showSd={this.state.showSd} scrolling={this.state.scrolling}/>
 				<Home/>
 				<Projects slideHandler={this.slideHandler} slidePosition={this.state.slidePosition}/>
 				<AboutMe/>
 				<Contact/>
+            	<BackDrop showBd={this.state.showSd} hideBdHandler={this.showSdHandler}/>
+				<SideDrawer showSd={this.state.showSd} showSdHandler={this.showSdHandler}/>
 			</div>
 		);
 	}
