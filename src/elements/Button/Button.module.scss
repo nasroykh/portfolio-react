@@ -10,10 +10,19 @@
     font-size: $buttonFontSize;
     font-weight: 700;
     font-family: $secondaryFont;
+    transition: 500ms ease-in-out;
+    transition-property: color, background-color;
 }
 
 @media (min-width:992px) {
     .Button {
         font-size: $buttonFontSize*1.25;
     };
+}
+
+@media (hover: hover) {
+    .Button:hover {
+        background-color: $primaryColor;
+        color: $secondaryColor;
+    }
 }

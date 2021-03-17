@@ -21,15 +21,18 @@
     
     & > li {
         margin: .75em 0;
-        font-weight: 400;
         &:first-child a {
             width: 50%;
             margin-bottom: 1em;
         }
-    }
 
+    }
+    
     a {
         font-size: 1.25rem;
+        &:hover {
+            text-shadow: 0 0 1px $primaryColor;
+        }
     }
 
 }
@@ -54,21 +57,21 @@
 
 @media (min-width: 992px) {
     .SideDrawer {
-        display: grid;
-        grid-template-columns: 2fr repeat(4, 1fr);
+        flex-direction: row;
         padding: 1em 2em;
         align-items: center;
-        justify-items: center;
         width: auto;
+        text-align: center;
 
         & > li {
-            margin: 0 2em 0 0;
+            margin-right: 2em;
         }
-
         & > li:first-child {
             justify-self: flex-start;
+            margin-right: 10vw;
             a {
                 width: 70%;
+                margin: 0 auto;
             }
         }
 

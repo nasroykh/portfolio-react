@@ -31,6 +31,7 @@
     height: 3.125em;
     z-index: 3060;
     overflow: hidden;
+    transition: background 500ms ease-in-out;
 }
 
 .MenuBtn button {
@@ -109,5 +110,15 @@
             transform: rotate(45deg) translate(-27.5%);
         }
     
+    }
+}
+
+@media (hover: hover) {
+    .MenuBtn:hover {
+        background-color: $primaryColor;
+
+        span {
+            background-color: $secondaryColor;
+        }
     }
 }

@@ -25,7 +25,7 @@ class App extends Component {
 	}
 
 	scrollHandler = (e) => {
-		if (window.scrollY > 50) {
+		if (window.scrollY > 100) {
 			this.setState({...this.state, scrolling: true})
 		}
 		else {
@@ -34,7 +34,6 @@ class App extends Component {
 	}
 
 	showSdHandler = () => {
-		console.log('hey');
 		this.setState((prevState) => (
 			{
 				...this.state,
@@ -66,7 +65,7 @@ class App extends Component {
 		return (
 			<div className={classes.App}>
 				<NavBar showSdHandler={this.showSdHandler} showSd={this.state.showSd} scrolling={this.state.scrolling}/>
-				<Home/>
+				<Home scrolling={this.state.scrolling}/>
 				<Projects slideHandler={this.slideHandler} slidePosition={this.state.slidePosition}/>
 				<AboutMe/>
 				<Contact/>

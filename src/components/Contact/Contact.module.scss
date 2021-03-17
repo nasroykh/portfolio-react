@@ -49,11 +49,11 @@
         border-bottom: 2px solid rgba($primaryColor, 0.6);
         border-top: 2px solid rgba($primaryColor, 0.6);
         border-radius: 12.5px;
-        overflow: hidden;
     }
     
     input, textarea {
         display: block;
+        border-radius: 12.5px;
         background: none;
         border: none;
         outline: none;
@@ -61,9 +61,23 @@
         height: 100%;
         padding: 1.25em 0 1.25em 5%;
         background-color: rgba($secondaryColor, 0.25);
+        font-size: 1rem;
+        resize: none;
 
         &:focus {
             background-color: $secondaryColor;
+
+        }
+
+        &:valid,
+        &:focus {
+            & ~ label {
+                transform: translateY(-150%);
+                background-color: $secondaryColor;
+                opacity: 1;
+                padding: 0 .25em;
+                font-size: 1.1rem;
+            }
         }
     }
 
@@ -72,10 +86,11 @@
         left: 5%;
         font-weight: 500;
         opacity: 0.5;
+        transition: all 250ms ease-in-out;
     }
 
     textarea ~ label {
-        top: 10%;
+        top: 8%;
     }
 
     & > button:last-child {

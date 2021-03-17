@@ -16,19 +16,19 @@ const Contact = () => {
             <span>Fill this form to send a message</span>
             <form className={classes.ContactForm}>
                 <div>
+                    <input type="text" id="name" required/>
                     <label htmlFor="name">Your name</label>
-                    <input type="text" id="name"/>
                 </div>
                 <div>
+                    <input type="email" id="email" required/>
                     <label htmlFor="email">Your e-mail</label>
-                    <input type="email" id="email"/>
                 </div>
                 <div>
+                    <input type="text" id="subject" required/>
                     <label htmlFor="subject">Subject</label>
-                    <input type="text" id="subject"/>
                 </div>
                 <div>
-                    <textarea name="" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="" id="message" cols="20" rows="10" required></textarea>
                     <label htmlFor="message">Your message</label>
                 </div>
                 <Button>Submit</Button>
