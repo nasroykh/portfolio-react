@@ -17,12 +17,18 @@
 @media (min-width:992px) {
     .Button {
         font-size: $buttonFontSize*1.25;
-    };
+    }
 }
 
 @media (hover: hover) {
     .Button:hover {
         background-color: $primaryColor;
         color: $secondaryColor;
+    }
+}
+
+@media (min-width: 1920px) {
+    .Button {
+        font-size: $buttonFontSize*1.5;
     }
 }

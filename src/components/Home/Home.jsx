@@ -15,8 +15,8 @@ const Home = (props) => {
                 <h1>Hi! My name’s <b>Nas </b> <br/>
                     I’m a <b>full-stack developer</b></h1>
                 <div className={classes.HeroButtons}>
-                    <Button>View Projects</Button>
-                    <Button>Contact Now</Button>
+                    <Button type="link" href="#projects">View Projects</Button>
+                    <Button type="link" href="#contact">Contact Now</Button>
                 </div>
             </div>
 

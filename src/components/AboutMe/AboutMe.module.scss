@@ -143,3 +143,23 @@
         }
     }
 }
+
+@media (min-width: 1920px) {
+    .AboutMe {
+        & > h2 {
+            font-size: 3rem*2.75;
+        }
+
+        & > p {
+            font-size: 1rem*1.5;
+        }
+    }
+
+    .SkillSet {
+        font-size: 1.5rem;
+
+        span:last-child {
+            font-size: 1.5rem;
+        }
+    }
+}

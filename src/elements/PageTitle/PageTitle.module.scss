@@ -5,7 +5,7 @@
     font-family: $secondaryFont;
     font-size: $pageTitleFontSize;
     display: inline-block;
-    margin-bottom: 1.5em;
+    margin: 1.5em 0;
     z-index: 5025;
     &::after {
         content: '';
@@ -26,5 +26,11 @@
 @media (min-width: 992px) {
     .PageTitle {
         font-size: $pageTitleFontSize*1.375;
+    }
+}
+
+@media (min-width: 1920px) {
+    .PageTitle {
+        font-size: $pageTitleFontSize*1.875;
     }
 }

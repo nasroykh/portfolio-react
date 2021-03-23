@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './AboutMe.module.scss';
 import PageTitle from '../../elements/PageTitle/PageTitle';
 import SkillIcon from '../../elements/SkillIcon/SkillIcon';
-import picture from '../../assets/aboutme-pic.png';
+import picture from '../../assets/aboutme-pic.jpg';
 import {ReactComponent as ShopifyAmLogo} from '../../assets/aboutme-shopify.svg';
 import {ReactComponent as ReactAmLogo} from '../../assets/aboutme-react.svg';
 import {ReactComponent as DbLogo} from '../../assets/server.svg';

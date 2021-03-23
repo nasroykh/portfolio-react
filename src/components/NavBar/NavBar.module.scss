@@ -122,3 +122,25 @@
         }
     }
 }
+
+@media (min-width: 1920px) {
+    .MenuBtn {
+        width: 4.6875em*1.75;
+        height: 3.125em*1.75;
+
+        button > span {
+            height: 9px;
+        }
+    }
+
+    .CloseBtn button {
+
+        & > span:nth-child(1) {
+            transform: rotate(-45deg) translate(-25%);
+        }
+    
+        & > span:nth-child(3) {
+            transform: rotate(45deg) translate(-23.5%);
+        }
+    }
+}

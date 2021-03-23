@@ -43,7 +43,7 @@ class App extends Component {
 	}
 
 	slideHandler = (e) => {
-		if (e.currentTarget.id === 'next' && this.state.slidePosition<2) {
+		if (e.currentTarget.id === 'next' && this.state.slidePosition<3) {
 			this.setState((prevState) => (
 				{
 					...this.state,

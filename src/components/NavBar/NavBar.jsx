@@ -11,7 +11,7 @@ const NavBar = (props) => {
             <Logo scrolling={props.scrolling}/>
             
             <div className={`${classes.MenuBtn} ${props.showSd ? classes.CloseBtn : ''}`}>
-                <button onClick={props.showSdHandler}>
+                <button onClick={props.showSdHandler} name="menu-button">
                     <span></span>
                     <span></span>
                     <span></span>

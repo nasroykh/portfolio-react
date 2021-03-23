@@ -28,9 +28,9 @@
     position: relative;
     overflow: hidden;
     border: 2px solid $primaryColor;
-    margin: auto;
-    margin-bottom: 5em;
-    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    max-width: 750px;
 }
 
 .ProjectDetails {
@@ -50,8 +50,9 @@
     transition: opacity 500ms ease-in-out;
     
     & > p {
-        margin: auto;
+        margin: auto .25em;
         font-size: $paragraphFontSize;
+        line-height: 1.5;
     }
     
 }
@@ -169,9 +170,7 @@
     .ProjectLinks {
         a {
             background-color: $secondaryColor;
-            &:hover,
-            &:active,
-            &:focus {
+            &:hover{
                 background-color: $primaryColor;
     
                 span {
@@ -206,6 +205,12 @@
             padding-bottom: 1em;
         }
 
+    }
+
+    .ProjectDetails > p {
+        margin: auto 1em;
+        font-size: $paragraphFontSize;
+        line-height: 2;
     }
     
     .ProjectView {
@@ -251,6 +256,12 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .ProjectDetails > p {
+        margin: auto 1em;
+        font-size: $paragraphFontSize*1.125;
+        line-height: 2;
+    }
+
     .ProjectLinks {
         a {
             padding: .75em 0;
@@ -271,7 +282,47 @@
         margin-right: -$d-pad;
     }
 
+    .ProjectDetails > p {
+        margin: auto 1em;
+        font-size: $paragraphFontSize*1.150;
+        line-height: 2;
+    }
+
+    .BuiltUsing {
+        align-self: flex-start;
+    }
+
+
     .TechLogos {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1920px) {
+    .Projects {
+        font-size: 1.25rem;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    .ProjectDetails > p {
+        font-size: $paragraphFontSize*1.375;
+    }
+
+    .BuiltUsing > span {
+        font-size: 1.5rem;
+    }
+
+    .ProjectLinks a {
+        padding: 1em 0;
+        span {
+            font-size: 1.375rem;
+            padding: 0 .5em;
+        }
+    
+        svg { 
+            padding: 0;
+        }
     }
 }

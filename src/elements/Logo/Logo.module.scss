@@ -33,3 +33,13 @@
         width: 55%;
     }
 }
+
+@media (min-width: 1920px) {
+    .Logo a {
+        width: 100%;
+    }
+
+    .SmallLogo a{
+        width: 65%;
+    }
+}

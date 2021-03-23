@@ -31,7 +31,7 @@
     a {
         font-size: 1.25rem;
         &:hover {
-            text-shadow: 0 0 1px $primaryColor;
+            // text-shadow: 0 0 10px $primaryColor;
         }
     }
 
@@ -43,16 +43,16 @@
 }
 
 .Active {
-    font-weight: 600;
-    &::after {
-        content: '';
-        display: block;
-        width: 50%;
-        height: 3px;
-        border-radius: 0 12.5px 0 12.5px;
-        background-color: $primaryColor;
-        margin: auto;
-    }
+    // text-shadow: 0 0 10px $primaryColor;
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     width: 50%;
+    //     height: 3px;
+    //     border-radius: 0 12.5px 0 12.5px;
+    //     background-color: $primaryColor;
+    //     margin: auto;
+    // }
 }
 
 @media (min-width: 992px) {
@@ -77,6 +77,20 @@
 
         a {
             font-size: 1.375rem;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .SideDrawer {
+        padding: 2em 3em;
+        
+        & > li:first-child a {
+            width: 80%;
+        }
+
+        a {
+            font-size: 1.5rem;
         }
     }
 }

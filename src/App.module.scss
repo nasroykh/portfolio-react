@@ -19,6 +19,7 @@ body, html, .App {
     background-attachment: fixed;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 img, svg {

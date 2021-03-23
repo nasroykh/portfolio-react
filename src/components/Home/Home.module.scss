@@ -1,12 +1,16 @@
 @import '../../scss/variables.scss';
 
 .Home {
-    padding: 7.5em 0 12em;
+    padding: 7em 0;
     position: relative;
+    height: 100vh;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 .HeroSection {
-    margin: 2em 0;
+    margin: auto 0;
     & > h1 {
         font-weight: 400;
         font-size: $heroFontSize;
@@ -25,13 +29,13 @@
     align-items: center;
     margin: 2em 0;
 
-    & > button {
+    & > a {
         width: 60%;
         padding: auto 1em;
     }
 
-    & > button:last-child {
-        margin: 1.25em 0;
+    & > a:last-child {
+        margin: 1.25em 0 0;
         width: 55%;
     }
 }
@@ -40,7 +44,7 @@
     background-color: $secondaryColor;
     border-top: 2px solid $primaryColor;
     border-bottom: 2px solid $primaryColor;
-    
+    margin: auto;
     margin-left: -$m-pad;
     margin-right: -$m-pad;
 
@@ -57,7 +61,7 @@
         width: 50%;
         margin: auto;
         height: 100%;
-        padding: 1em 0;
+        padding: .5em 0;
 
         svg {
             margin-bottom: .5em;
@@ -76,11 +80,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    margin-top: 2em;
+    position: fixed;
+    margin: auto;
+    text-align: center;
+    bottom: 0;
     left: 25%;
     right: 25%;
-    opacity: 1;
+    opacity: 0.5;
     transition: all 500ms ease-in-out;
     transform: translateY(0%);
     
@@ -100,19 +106,21 @@
     transform: translateY(100%);
 }
 
-@media (min-width: 576px) {
 
+@media (min-width: 576px) {
+    
     .HeroButtons {
-        & > button {
+        & > a {
             width: 40%;
             padding: auto 1em;
         }
-    
-        & > button:last-child {
+        
+        & > a:last-child {
             width: 35%;
-        }    }
+        }    
+    }
 
-
+        
 }
 
 @media (min-width: 768px) {
@@ -120,25 +128,26 @@
         padding: 12.5em 0 10em;
         height: 100vh;
     }
-
+    
     .ScrollDown {
         margin-top: 0;
         bottom: 0;
-        transform: translateY(-75%);
+        transform: translateY(-50%);
     }
-
+    
     .HideScrollDown {
         transform: translateY(0%);
     }
-
+    
 }
 
 @media (min-width: 992px) {
     .Home {
         padding: 12.5em 0 10em;
         height: 100vh;
-        margin-bottom: 5em;
+        margin-bottom: 2.5em;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
     .HeroSection {
@@ -150,30 +159,33 @@
             text-align: left;
         }
     }
-
+    
     .HeroButtons {
         flex-direction: row;
         margin: 2em 0;
-    
-        & > button {
+        
+        & > a {
             width: 25%;
             padding: 1.25em 0;
         }
-
-        & > button:last-child {
+        
+        & > a:last-child {
             margin: 0 0 0 1em;
             width: 20%;
         }
     }
-
+    
     .Aside {
         border: 2px solid $primaryColor;
         border-right: none;
+        margin: 0;
         margin-right: -$d-pad;    
         border-radius: 25px 0 0 25px;
         width: 4.6875em*1.5;
-        min-height: 250px;
-        
+        min-height: 300px;
+        align-self: center;
+        height: 50vh;
+
         ul {
             flex-direction: column;
             align-items: center;
@@ -181,36 +193,73 @@
             height: 100%;
         }
         
-    
+        
         a {
             position: relative;
             width: 75%;
             margin: auto;
-            width: 75%;
             padding: 0;
-
+            
             svg {
                 margin-bottom: 0;
             }
             
-            &:hover {
-                span {
-                    transform: translateX(0) scale(1);
-                    opacity: 1;
-                }
-            }
-
-            span {
-                font-size: 1.375rem;
-                position: absolute;
-                left: -425%;
-                top: 25%;
-                font-weight: 700;
-                transform: translateX(300%) scale(0);
-                opacity: 0;
-                transition: all 300ms ease-in-out;
-            }
+            
         }
+        
+    }
+}
 
+@media (hover: none) and (min-width: 992px) {
+    .Aside a svg {
+        margin-bottom: .25em;
+    }
+}
+
+
+@media (hover:hover) and (min-width: 992px) {
+    .Aside a:hover {
+        span {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+    
+    .Aside a span {
+        font-size: 1.375rem;
+        position: absolute;
+        left: -425%;
+        top: 25%;
+        font-weight: 700;
+        transform: translateX(300%) scale(0);
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+}
+
+@media (min-width: 1920px) {
+    .HeroSection > h1 {
+        font-size: $heroFontSize*1.75;
+    }
+
+
+    .Aside {
+        width: 4.6875em*1.75;
+    }
+
+    .Aside a {
+        width: 90%;
+        span {
+            font-size: 1.75rem;
+        }
+    }
+
+    .ScrollDown {
+        span {
+            font-size: $buttonFontSize*1.375;
+        }
+        svg {
+            padding: .5em;
+        }
     }
 }
