@@ -12,8 +12,8 @@ const Home = (props) => {
     return (
         <section className={classes.Home} id="home">
             <div className={classes.HeroSection}>
-                <h1>Hi! My name’s <b>Nas </b> <br/>
-                    I’m a <b>full-stack developer</b></h1>
+                <h1>Hi! My name is <b>Nas </b> <br/>
+                    I am a <b>Full Stack Developer</b></h1>
                 <div className={classes.HeroButtons}>
                     <Button type="link" href="#projects">View Projects</Button>
                     <Button type="link" href="#contact">Contact Now</Button>

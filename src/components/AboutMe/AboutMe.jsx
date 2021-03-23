@@ -16,7 +16,7 @@ const AboutMe = () => {
             <div className={classes.AboutMe}>
                 <h2>Nasreddine Yakhou</h2>
                 <img src={picture} alt=""/>
-                <p>I’m a full-stack developer, with 2 years of web development experience.<br/><br/>
+                <p>I am a Full Stack Developer, with 2 years of Web Development experience.<br/><br/>
                     I honestly love programming and solving problems and on top of that I take great pleasure in learning, 
                     I can’t support staying more than a day without acquiring a knowledge of something!<br/><br/>
                     I also have intermediate skills in UI/UX design.</p>
