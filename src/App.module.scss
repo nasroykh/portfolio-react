@@ -16,8 +16,7 @@ button {
 
 body, html, .App {
     background-image: linear-gradient(to bottom right, $secondaryColor, #171007);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-attachment: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }

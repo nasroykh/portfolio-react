@@ -88,6 +88,7 @@
     right: 25%;
     opacity: 0.5;
     transition: all 500ms ease-in-out;
+    pointer-events: none;
     transform: translateY(0%);
     
     span {

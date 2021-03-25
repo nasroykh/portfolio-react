@@ -23,25 +23,25 @@ const Home = (props) => {
             <aside className={classes.Aside}>
                 <ul>
                     <li>
-                        <a href="https://github.com/nasroykh">
+                        <a href="https://github.com/nasroykh" target='_blank'>
                             <span>Github</span>
                             <GithubLogo/>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/nasreddine-yakhou-4b619a157">
+                        <a href="https://www.linkedin.com/in/nasreddine-yakhou-4b619a157" target='_blank'>
                             <span>LinkedIn</span>
                             <LinkedinLogo/>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/nastech.dev">
+                        <a href="https://www.instagram.com/nastech.dev" target='_blank'>
                             <span>Instagram</span>
                             <InstagramLogo/>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" target='_blank'>
                             <span>Resume</span>
                             <ResumeLogo/>
                         </a>
