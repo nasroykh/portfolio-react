@@ -7,21 +7,28 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
 import SideDrawer from './elements/SideDrawer/SideDrawer';
 import BackDrop from './elements/BackDrop/BackDrop';
+import LoadingPage from './components/LoadingPage/LoadingPage';
 
 class App extends Component {
 
+	state = {
+		showSd: false,
+		slidePosition: 0,
+		scrolling: false,
+		pageLoaded: false
+	}
+
 	componentDidMount() {
 		window.addEventListener('scroll', this.scrollHandler);
+		window.addEventListener('load', this.pageLoadHandler);
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this.scrollHandler);
 	}
 
-	state = {
-		showSd: false,
-		slidePosition: 0,
-		scrolling: false
+	pageLoadHandler = () => {
+		this.setState({...this.state, pageLoaded: true});
 	}
 
 	scrollHandler = (e) => {
@@ -43,7 +50,7 @@ class App extends Component {
 	}
 
 	slideHandler = (e) => {
-		if (e.currentTarget.id === 'next' && this.state.slidePosition<3) {
+		if (e.currentTarget.id === 'next' && this.state.slidePosition<2) {
 			this.setState((prevState) => (
 				{
 					...this.state,
@@ -64,6 +71,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className={classes.App}>
+				<LoadingPage pageLoaded={this.state.pageLoaded}/>
 				<NavBar showSdHandler={this.showSdHandler} showSd={this.state.showSd} scrolling={this.state.scrolling}/>
 				<Home scrolling={this.state.scrolling}/>
 				<Projects slideHandler={this.slideHandler} slidePosition={this.state.slidePosition}/>

@@ -185,7 +185,7 @@ const Projects = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className={classes.Project} style={slideStyle}>
+                {/* <div className={classes.Project} style={slideStyle}>
                         <h2>C.M.S - Desktop Web app</h2>
                     <div className={classes.ProjectView}>
                         <img src={cmswebapp} alt=""/>
@@ -238,7 +238,7 @@ const Projects = (props) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )

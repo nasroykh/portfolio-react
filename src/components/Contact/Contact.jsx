@@ -25,10 +25,6 @@ const Contact = () => {
                     <label htmlFor="email">Your e-mail</label>
                 </div>
                 <div>
-                    <input type="text" name="subject" id="subject" required/>
-                    <label htmlFor="subject">Subject</label>
-                </div>
-                <div>
                     <textarea name="message" id="message" rows="10" required></textarea>
                     <label htmlFor="message">Your message</label>
                 </div>
