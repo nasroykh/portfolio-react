@@ -41,19 +41,19 @@ const Projects = (props) => {
                         <button id="next" onClick={props.slideHandler}><SlideIcon/></button>
                 </div>
                 <div className={classes.Project} style={slideStyle}>
-                    <h2>RbForm - Desktop Web app</h2>
+                    <h2>RbForm - Web app</h2>
                     <div className={classes.ProjectView}>
                         <img src={rbform} alt=""/>
                         <div className={classes.ProjectDetails}>
                             <p>Web app developed during my internship, I introduced it at my thesis presentation.</p>
                             <div className={classes.ProjectLinks}>
-                                <a href="#" target='_blank'>
+                                <a href="https://github.com/nasroykh/rbform-nodejs" target='_blank'>
                                     <span>View code</span>
                                     <CodeIcon color="#101820"/>
                                 </a>
-                                <a href="#" target='_blank'>
+                                <a href="https://youtu.be/Sael3KElCrA" target='_blank'>
                                     <ViewIcon color="#101820"/>
-                                    <span>Visit</span>
+                                    <span>Show preview</span>
                                 </a>
                             </div>
                         </div>

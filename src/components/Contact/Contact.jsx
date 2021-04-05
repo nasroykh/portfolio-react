@@ -7,15 +7,15 @@ const Contact = () => {
     return (
         <section className={classes.Contact} id="contact">
             <PageTitle>CONTACT</PageTitle>
-            <Button type="link" href="mailto:nasreddine.yakhou@pm.me">Send an e-mail <b> to copy e-mail address)</b></Button>
+            <Button type="link" href="mailto:nas.ykh@hotmail.com">Send an e-mail <b> to copy e-mail address)</b></Button>
             <div className={classes.SeparatorLine}>
                 <span></span>
                 <span>OR</span>
                 <span></span>
             </div>
             <span>Fill the form below to send a message</span>
-            <form className={classes.ContactForm} action='https://formsubmit.io/send/f424f8a1-4f4e-4e00-9142-95ab3c64ae5f' method='POST'>
-                <input name="_redirect" type="hidden" id="name" value="https://www.nasykh.com/"/>
+            <form className={classes.ContactForm} action='https://formsubmit.io/send/0d2b73f4-c3f7-49f5-814f-0f7cc68b2186' method='POST'>
+                <input name="_redirect" type="hidden" value="https://www.nasykh.com/"/>
                 <div>
                     <input type="text" name="name" id="name" required/>
                     <label htmlFor="name">Your name</label>
