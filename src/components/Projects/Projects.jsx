@@ -3,7 +3,7 @@ import React from 'react'
 import PageTitle from '../../elements/PageTitle/PageTitle';
 import SkillIcon from '../../elements/SkillIcon/SkillIcon';
 import rbform from '../../assets/rbform.png';
-import cmswebapp from '../../assets/cmswebapp.png';
+import cmswebapp from '../../assets/cmswebapp.gif';
 import advent from '../../assets/advent.png';
 import bamboo from '../../assets/bamboo.png';
 import CodeIcon from '../../elements/CodeIcon/CodeIcon';
@@ -185,8 +185,8 @@ const Projects = (props) => {
                         </div>
                     </div>
                 </div>
-                {/* <div className={classes.Project} style={slideStyle}>
-                        <h2>C.M.S - Desktop Web app</h2>
+                <div className={classes.Project} style={slideStyle}>
+                        <h2>C.M.S - Web app</h2>
                     <div className={classes.ProjectView}>
                         <img src={cmswebapp} alt=""/>
                         <div className={classes.ProjectDetails}>
@@ -238,7 +238,7 @@ const Projects = (props) => {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </section>
     )
