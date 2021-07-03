@@ -48,11 +48,11 @@ const Projects = (props) => {
                         <div className={classes.ProjectDetails}>
                         <p>Chat web app developed using MERN Stack (Real-time messaging, group chat system, dark/light mode, messages and friend requests notifications...etc)</p>                            
                             <div className={classes.ProjectLinks}>
-                                <a href="https://github.com/nasroykh/hablamos-react-frontend-mobile" target='_blank'>
+                                <a href="https://github.com/nasroykh/hablamos-react-frontend-mobile" rel="noreferrer" target='_blank'>
                                     <span>View code</span>
                                     <CodeIcon color="#101820"/>
                                 </a>
-                                <a href="https://hablamos.me/" target='_blank'>
+                                <a href="https://hablamos.me/" rel="noreferrer" target='_blank'>
                                     <ViewIcon color="#101820"/>
                                     <span>Visit</span>
                                 </a>
@@ -115,11 +115,11 @@ const Projects = (props) => {
                             <p>Landing page developed using Vishwajeet's UI design on Figma.
                                 I designed the mobile version to follow the "mobile-first" approach.</p>
                             <div className={classes.ProjectLinks}>
-                                <a href="https://github.com/nasroykh/advent-frontend" target='_blank'>
+                                <a href="https://github.com/nasroykh/advent-frontend" rel="noreferrer" target='_blank'>
                                     <span>View code</span>
                                     <CodeIcon color="#101820"/>
                                 </a>
-                                <a href="https://advent-landingpage-6c3c64.netlify.app/" target='_blank'>
+                                <a href="https://advent-landingpage-6c3c64.netlify.app/" rel="noreferrer" target='_blank'>
                                     <ViewIcon color="#101820"/>
                                     <span>Visit</span>
                                 </a>
@@ -157,11 +157,11 @@ const Projects = (props) => {
                         <div className={classes.ProjectDetails}>
                             <p>Web app developed during my internship, I introduced it at my thesis presentation.</p>
                             <div className={classes.ProjectLinks}>
-                                <a href="https://github.com/nasroykh/rbform-nodejs" target='_blank'>
+                                <a href="https://github.com/nasroykh/rbform-nodejs" rel="noreferrer" target='_blank'>
                                     <span>View code</span>
                                     <CodeIcon color="#101820"/>
                                 </a>
-                                <a href="https://youtu.be/Sael3KElCrA" target='_blank'>
+                                <a href="https://youtu.be/Sael3KElCrA" rel="noreferrer" target='_blank'>
                                     <ViewIcon color="#101820"/>
                                     <span>Show preview</span>
                                 </a>
@@ -211,17 +211,17 @@ const Projects = (props) => {
                     </div>
                 </div>
                 <div className={classes.Project} style={slideStyle}>
-                        <h2>C.M.S - Web app</h2>
+                        <h2>B.M.C - Web app</h2>
                     <div className={classes.ProjectView}>
                         <img src={cmswebapp} alt=""/>
                         <div className={classes.ProjectDetails}>
                             <p>React web app designed and developed for a medical center.</p>
                             <div className={classes.ProjectLinks}>
-                                <a href="https://github.com/nasroykh/cms-react-frontend" target='_blank'>
+                                <a href="https://github.com/nasroykh/cms-react-frontend" rel="noreferrer" target='_blank'>
                                     <span>View code</span>
                                     <CodeIcon color="#101820"/>
                                 </a>
-                                <a href="#" target='_blank'>
+                                <a href="/" rel="noreferrer" target='_blank'>
                                     <ViewIcon color="#101820"/>
                                     <span>Visit</span>
                                 </a>
